@@ -6,7 +6,7 @@
 
 **Chrome Extension to Extract Domains from Google Search Results**
 
-[![Author](https://img.shields.io/badge/Author-ofjaaah-blue)](https://twitter.com/oaborla)
+[![Author](https://img.shields.io/badge/Author-ofjaaah-blue)](https://github.com/KingOfBugbounty)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Chrome](https://img.shields.io/badge/Chrome-Extension-yellow.svg)](https://developer.chrome.com/docs/extensions/)
 
@@ -218,7 +218,7 @@ crawlgoogle/
 
 ## Author
 
-**ofjaaah** - [@oaborla](https://twitter.com/oaborla)
+**ofjaaah**
 
 ---
 
