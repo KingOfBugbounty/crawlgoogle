@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrawlGoogle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CrawlGoogle</h1>
+      <span class="author">by ofjaaah</span>
+    </div>
+
+    <div class="config-section">
+      <h2>VPS Configuration</h2>
+      <div class="input-group">
+        <label for="vps-ip">VPS IP Address</label>
+        <input type="text" id="vps-ip" placeholder="192.168.1.100">
+      </div>
+      <div class="input-group">
+        <label for="vps-port">Port</label>
+        <input type="number" id="vps-port" placeholder="9876" value="9876" min="1024" max="65535">
+      </div>
+      <div class="input-group toggle-group">
+        <label for="collect-mode">Collect Mode</label>
+        <div class="toggle-container">
+          <span class="toggle-label" id="mode-label">Domain only</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="collect-full-url">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-hint">Full URL</span>
+        </div>
+      </div>
+      <button id="save-config" class="btn btn-primary">Save & Start Collecting</button>
+    </div>
+
+    <div class="status-section">
+      <h2>Status</h2>
+      <div class="status-indicator">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text">Not configured</span>
+      </div>
+      <div class="connection-info">
+        <span id="connection-info"></span>
+      </div>
+    </div>
+
+    <div class="controls-section">
+      <h2>Collection Control</h2>
+
+      <!-- Collecting Indicator -->
+      <div id="collecting-indicator" class="collecting-indicator hidden">
+        <div class="collecting-animation">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <span class="collecting-text">Auto-collecting while you browse...</span>
+      </div>
+
+      <!-- Stop Button -->
+      <button id="stop-btn" class="btn btn-stop hidden">
+        <span class="stop-icon">⏹️</span>
+        <span>STOP COLLECTING</span>
+      </button>
+
+      <!-- Start Button -->
+      <button id="start-btn" class="btn btn-collect hidden">
+        <span class="collect-icon">▶️</span>
+        <span>START COLLECTING</span>
+      </button>
+
+      <button id="clear-domains" class="btn btn-danger">Clear All Domains</button>
+    </div>
+
+    <div class="pagination-section">
+      <h2>Auto-Pagination</h2>
+      <p class="section-hint">Automatically collect from all Google search pages</p>
+      <div class="input-group">
+        <label for="max-pages">Max Pages</label>
+        <input type="number" id="max-pages" placeholder="50" value="50" min="1" max="100">
+      </div>
+      <div class="input-group">
+        <label for="page-delay">Delay between pages (ms)</label>
+        <input type="number" id="page-delay" placeholder="2000" value="2000" min="500" max="10000" step="500">
+      </div>
+      <div class="pagination-controls">
+        <button id="start-pagination" class="btn btn-pagination">
+          <span>Start Pagination</span>
+        </button>
+        <button id="stop-pagination" class="btn btn-stop hidden">
+          <span>Stop Pagination</span>
+        </button>
+      </div>
+      <div id="pagination-status" class="pagination-status hidden">
+        <span class="page-progress">Page <span id="current-page">1</span>/<span id="max-page-display">50</span></span>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <h2>Statistics</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-value" id="domains-count">0</span>
+          <span class="stat-label">Domains Collected</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="sent-count">0</span>
+          <span class="stat-label">Sent to VPS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="domains-section">
+      <h2>Recent Domains</h2>
+      <div class="domains-list" id="domains-list">
+        <p class="empty-message">No domains collected yet</p>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <p>Navigate Google search results - domains are collected automatically!</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

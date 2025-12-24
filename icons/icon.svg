@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#c73e54"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" rx="20" fill="url(#bg)"/>
+
+  <!-- Magnifying glass circle -->
+  <circle cx="52" cy="52" r="28" fill="none" stroke="url(#accent)" stroke-width="6"/>
+
+  <!-- Magnifying glass handle -->
+  <line x1="72" y1="72" x2="100" y2="100" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Domain lines inside magnifying glass -->
+  <line x1="35" y1="42" x2="69" y2="42" stroke="#4ecdc4" stroke-width="3" stroke-linecap="round"/>
+  <line x1="35" y1="52" x2="65" y2="52" stroke="#4ecdc4" stroke-width="3" stroke-linecap="round"/>
+  <line x1="35" y1="62" x2="60" y2="62" stroke="#4ecdc4" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Dots representing crawling -->
+  <circle cx="28" cy="42" r="3" fill="#e94560"/>
+  <circle cx="28" cy="52" r="3" fill="#e94560"/>
+  <circle cx="28" cy="62" r="3" fill="#e94560"/>
+</svg>

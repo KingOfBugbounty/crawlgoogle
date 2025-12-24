@@ -1,0 +1,32 @@
+# SSL certificates and keys - NEVER commit these
+server.key
+server.crt
+*.key
+*.crt
+*.pem
+
+# Logs
+server.log
+*.log
+
+# Collected data
+domains_collected.txt
+domains.txt
+*.collected
+
+# Local config
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
