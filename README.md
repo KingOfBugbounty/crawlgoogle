@@ -16,31 +16,17 @@
 
 ## How It Works
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           CrawlGoogle Workflow                               │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│   ┌──────────────┐    ┌──────────────────┐    ┌──────────────────────────┐  │
-│   │              │    │                  │    │                          │  │
-│   │   GOOGLE     │───▶│  CRAWLGOOGLE     │───▶│     YOUR VPS SERVER      │  │
-│   │   SEARCH     │    │  EXTENSION       │    │                          │  │
-│   │              │    │                  │    │   python3 server.py      │  │
-│   └──────────────┘    └──────────────────┘    └──────────────────────────┘  │
-│         │                     │                          │                  │
-│         │                     │                          │                  │
-│         ▼                     ▼                          ▼                  │
-│   ┌──────────────┐    ┌──────────────────┐    ┌──────────────────────────┐  │
-│   │ Search for:  │    │ Auto-extracts:   │    │ Saves to file:           │  │
-│   │              │    │                  │    │                          │  │
-│   │ bug bounty   │    │ • example.com    │    │ domains_collected.txt    │  │
-│   │ programs     │    │ • target.org     │    │                          │  │
-│   │ vulnerability│    │ • company.io     │    │ Ready for scanning!      │  │
-│   │ disclosure   │    │ • ...            │    │                          │  │
-│   └──────────────┘    └──────────────────┘    └──────────────────────────┘  │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="assets/workflow-animation.svg" alt="CrawlGoogle Workflow" width="100%">
+</p>
+
+---
+
+## Demo
+
+<p align="center">
+  <img src="assets/terminal-demo.svg" alt="Terminal Demo" width="100%">
+</p>
 
 ---
 

@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <style>
+    @keyframes moveRight {
+      0% { transform: translateX(-30px); opacity: 0; }
+      20% { transform: translateX(0); opacity: 1; }
+      80% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(30px); opacity: 0; }
+    }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    @keyframes glow { 0%, 100% { filter: drop-shadow(0 0 5px #7aa2f7); } 50% { filter: drop-shadow(0 0 15px #7aa2f7); } }
+    @keyframes dataFlow1 { 0%, 100% { opacity: 0; } 10%, 30% { opacity: 1; } }
+    @keyframes dataFlow2 { 0%, 100% { opacity: 0; } 40%, 60% { opacity: 1; } }
+    @keyframes dataFlow3 { 0%, 100% { opacity: 0; } 70%, 90% { opacity: 1; } }
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    @keyframes countUp { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+    @keyframes arrowMove { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
+
+    .bg { fill: #0d1117; }
+    .card { fill: #161b22; stroke: #30363d; stroke-width: 2; }
+    .card-google { fill: #1a1a2e; stroke: #4285f4; }
+    .card-ext { fill: #1a1a2e; stroke: #9ece6a; }
+    .card-vps { fill: #1a1a2e; stroke: #bb9af7; }
+
+    .title { fill: #c9d1d9; font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; }
+    .subtitle { fill: #8b949e; font-family: 'Segoe UI', Arial, sans-serif; }
+    .label { fill: #58a6ff; font-family: monospace; }
+    .domain-text { fill: #7ee787; font-family: monospace; }
+    .number { fill: #ffa657; font-family: monospace; font-weight: bold; }
+
+    .google-icon { fill: #4285f4; }
+    .ext-icon { fill: #9ece6a; }
+    .vps-icon { fill: #bb9af7; }
+
+    .arrow { stroke: #484f58; stroke-width: 3; fill: none; stroke-dasharray: 8 4; }
+    .arrow-head { fill: #484f58; }
+
+    .data-packet { animation: moveRight 3s infinite; }
+    .data-packet1 { animation-delay: 0s; }
+    .data-packet2 { animation-delay: 1s; }
+    .data-packet3 { animation-delay: 2s; }
+
+    .pulse { animation: pulse 2s infinite ease-in-out; }
+    .glow { animation: glow 2s infinite; }
+
+    .arrow-animate { animation: arrowMove 1.5s infinite ease-in-out; }
+
+    .count-anim { animation: countUp 0.5s ease-out 2s both; }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" width="900" height="350" rx="15"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title" font-size="24">CrawlGoogle - Domain Extraction Flow</text>
+
+  <!-- Google Search Card -->
+  <g transform="translate(50, 70)">
+    <rect class="card card-google" width="200" height="200" rx="12"/>
+
+    <!-- Google Logo simplified -->
+    <g transform="translate(70, 30)">
+      <circle cx="30" cy="30" r="25" fill="none" stroke="#4285f4" stroke-width="6"/>
+      <text x="22" y="40" font-size="28" font-weight="bold" fill="#4285f4">G</text>
+    </g>
+
+    <text x="100" y="100" text-anchor="middle" class="title" font-size="16">Google Search</text>
+
+    <!-- Search results simulation -->
+    <g transform="translate(20, 115)">
+      <rect width="160" height="18" rx="3" fill="#21262d"/>
+      <text x="10" y="13" class="domain-text" font-size="11">hackerone.com</text>
+    </g>
+    <g transform="translate(20, 138)">
+      <rect width="160" height="18" rx="3" fill="#21262d"/>
+      <text x="10" y="13" class="domain-text" font-size="11">bugcrowd.com</text>
+    </g>
+    <g transform="translate(20, 161)">
+      <rect width="160" height="18" rx="3" fill="#21262d"/>
+      <text x="10" y="13" class="domain-text" font-size="11">github.com</text>
+    </g>
+    <g transform="translate(20, 184)">
+      <rect width="160" height="18" rx="3" fill="#21262d"/>
+      <text x="10" y="13" class="subtitle" font-size="11">+ more results...</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(260, 150)" class="arrow-animate">
+    <path class="arrow" d="M 0,20 L 80,20"/>
+    <polygon class="arrow-head" points="80,12 100,20 80,28"/>
+  </g>
+
+  <!-- Data packets animation 1 -->
+  <g transform="translate(270, 155)">
+    <rect class="data-packet data-packet1" width="40" height="20" rx="5" fill="#7ee787" opacity="0.8"/>
+    <text class="data-packet data-packet1" x="8" y="14" font-size="9" fill="#0d1117" font-weight="bold">.com</text>
+  </g>
+
+  <!-- Extension Card -->
+  <g transform="translate(350, 70)">
+    <rect class="card card-ext glow" width="200" height="200" rx="12"/>
+
+    <!-- Extension icon -->
+    <g transform="translate(70, 25)">
+      <rect width="60" height="50" rx="8" fill="#238636"/>
+      <text x="30" y="35" text-anchor="middle" font-size="24" fill="white">CG</text>
+    </g>
+
+    <text x="100" y="100" text-anchor="middle" class="title" font-size="16">CrawlGoogle</text>
+    <text x="100" y="118" text-anchor="middle" class="subtitle" font-size="12">Chrome Extension</text>
+
+    <!-- Stats -->
+    <g transform="translate(30, 135)">
+      <text class="label" font-size="12">Collected:</text>
+      <text x="90" y="0" class="number count-anim" font-size="14">247</text>
+    </g>
+    <g transform="translate(30, 160)">
+      <text class="label" font-size="12">Sent:</text>
+      <text x="90" y="0" class="number count-anim" font-size="14">189</text>
+    </g>
+    <g transform="translate(30, 185)">
+      <text class="label" font-size="12">Status:</text>
+      <circle cx="95" cy="-4" r="6" fill="#3fb950" class="pulse"/>
+      <text x="108" y="0" class="domain-text" font-size="12">LIVE</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(560, 150)" class="arrow-animate">
+    <path class="arrow" d="M 0,20 L 80,20"/>
+    <polygon class="arrow-head" points="80,12 100,20 80,28"/>
+  </g>
+
+  <!-- Data packets animation 2 -->
+  <g transform="translate(570, 155)">
+    <rect class="data-packet data-packet2" width="50" height="20" rx="5" fill="#bb9af7" opacity="0.8"/>
+    <text class="data-packet data-packet2" x="5" y="14" font-size="8" fill="#0d1117" font-weight="bold">POST</text>
+  </g>
+
+  <!-- VPS Card -->
+  <g transform="translate(650, 70)">
+    <rect class="card card-vps" width="200" height="200" rx="12"/>
+
+    <!-- Server icon -->
+    <g transform="translate(70, 25)">
+      <rect width="60" height="45" rx="5" fill="#6e40c9"/>
+      <rect x="10" y="8" width="40" height="4" rx="2" fill="#0d1117"/>
+      <rect x="10" y="16" width="40" height="4" rx="2" fill="#0d1117"/>
+      <rect x="10" y="24" width="40" height="4" rx="2" fill="#0d1117"/>
+      <circle cx="50" cy="35" r="4" fill="#3fb950" class="pulse"/>
+    </g>
+
+    <text x="100" y="100" text-anchor="middle" class="title" font-size="16">Your VPS</text>
+    <text x="100" y="118" text-anchor="middle" class="subtitle" font-size="12">server.py</text>
+
+    <!-- Terminal output -->
+    <g transform="translate(15, 130)">
+      <rect width="170" height="65" rx="5" fill="#0d1117"/>
+      <text x="8" y="18" class="subtitle" font-size="10">$ python3 server.py</text>
+      <text x="8" y="35" class="domain-text" font-size="10">[+] Listening :9876</text>
+      <text x="8" y="52" class="domain-text" font-size="10">[+] 189 domains saved</text>
+    </g>
+  </g>
+
+  <!-- Bottom info -->
+  <text x="450" y="310" text-anchor="middle" class="subtitle" font-size="14">Automatically extracts domains while you browse Google</text>
+  <text x="450" y="330" text-anchor="middle" class="label" font-size="12">Real-time sync | Auto-pagination | Duplicate filtering</text>
+
+</svg>
